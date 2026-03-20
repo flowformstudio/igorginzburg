@@ -14,7 +14,13 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--white);
+  background-color: var(--white);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(17, 17, 17, 0.018) 0.6px, transparent 0.7px),
+    radial-gradient(circle at 80% 30%, rgba(17, 17, 17, 0.014) 0.5px, transparent 0.65px),
+    radial-gradient(circle at 40% 80%, rgba(17, 17, 17, 0.012) 0.5px, transparent 0.6px);
+  background-size: 18px 18px, 24px 24px, 20px 20px;
+  background-position: 0 0, 9px 11px, 4px 7px;
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
