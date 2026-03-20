@@ -87,6 +87,13 @@ body {
   color: var(--black);
   max-width: 900px;
 }
+.hero__headline-highlight {
+  display: inline;
+  padding: 0 0.12em;
+  background: linear-gradient(180deg, transparent 58%, #fde68a 58%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
 
 /* ── BIO ── */
 .bio {
