@@ -35,9 +35,7 @@
     "description": "Product Designer with 15+ years building SaaS and digital products from idea to scale, specializing in UX architecture, design systems, and human-centered design.",
     "url": "https://igorginzburg.com/",
     "image": "https://cdn.prod.website-files.com/62d7f53e2e44a905cff68bd9/62d7f53e2e44a94192f68e2e_1643648809707.jpeg",
-    "sameAs": [
-      "https://www.linkedin.com/in/igorginzburg/"
-    ],
+    "sameAs": ["https://www.linkedin.com/in/igorginzburg/"],
     "knowsAbout": ["UX Design", "UI Design", "Product Design", "SaaS", "Design Systems", "B2B", "Mobile Apps", "Fintech", "User Research"]
   }
   </script>
@@ -45,24 +43,27 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <a href="#main" class="skip-link">Skip to content</a>
 
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
   <header>
     <nav class="nav" id="nav" aria-label="Main navigation">
       <div class="nav__inner">
-        <div class="nav__brand">
+        <a href="#home" class="nav__brand">
           <span class="nav__name">Igor Ginzburg</span>
           <span class="nav__title">Founding Product Designer</span>
-        </div>
+        </a>
         <div class="nav__actions">
           <a href="Igor Ginzburg - Resume 2026.pdf" download class="pill-btn">Resume</a>
           <a href="https://www.linkedin.com/in/igorginzburg/" target="_blank" rel="noopener noreferrer" class="pill-btn">LinkedIn</a>
-          <a href="https://calendly.com/flowform/30min?back=1" target="_blank" rel="noopener noreferrer" class="pill-btn">Schedule a call</a>
+          <a href="https://calendly.com/flowform/30min?back=1" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn--gold">Schedule a call</a>
         </div>
       </div>
     </nav>
@@ -72,33 +73,63 @@
 
     <!-- HERO -->
     <section class="hero" id="home" aria-labelledby="hero-heading">
-      <div class="container">
-        <h1 class="hero__headline" id="hero-heading">It's never about the interface. <span class="hero__headline-highlight">It's about the human on the other side of it.</span></h1>
+      <div class="hero__noise" aria-hidden="true"></div>
+      <div class="container hero__container">
+        <p class="hero__eyebrow">Product Design · UX Architecture · Design Systems</p>
+        <h1 class="hero__headline" id="hero-heading">
+          It's never about<br>the interface.<br>
+          <em>It's about the human<br>on the other side of it.</em>
+        </h1>
+        <div class="hero__cta">
+          <a href="https://calendly.com/flowform/30min?back=1" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn--gold">Schedule a call</a>
+          <a href="#about" class="hero__scroll-link">About ↓</a>
+        </div>
       </div>
+      <div class="hero__line" aria-hidden="true"></div>
     </section>
 
     <!-- BIO -->
-    <section class="bio" id="about" aria-label="About Igor Ginzburg">
+    <section class="bio reveal" id="about" aria-label="About Igor Ginzburg">
       <div class="container">
+        <p class="section-tag">About</p>
         <div class="bio__inner">
-          <div class="bio__photo-wrap">
-            <img
-              src="https://cdn.prod.website-files.com/62d7f53e2e44a905cff68bd9/62d7f53e2e44a94192f68e2e_1643648809707.jpeg"
-              alt="Igor Ginzburg, Founding Product Designer"
-              class="bio__photo"
-              width="200" height="200"
-            >
+          <div class="bio__left">
+            <div class="bio__photo-wrap">
+              <img
+                src="https://cdn.prod.website-files.com/62d7f53e2e44a905cff68bd9/62d7f53e2e44a94192f68e2e_1643648809707.jpeg"
+                alt="Igor Ginzburg, Founding Product Designer"
+                class="bio__photo"
+                width="220" height="220"
+              >
+            </div>
+            <div class="bio__stats">
+              <div class="bio__stat">
+                <span class="bio__stat-num">15+</span>
+                <span class="bio__stat-label">Years Experience</span>
+              </div>
+              <div class="bio__stat">
+                <span class="bio__stat-num">40+</span>
+                <span class="bio__stat-label">Products Shipped</span>
+              </div>
+            </div>
           </div>
-          <p class="bio__text">Founding Product Designer with 15+ years building SaaS and digital products from idea to scale. I design with a deep focus on human behavior and how people think, decide, and build trust. Creating experiences grounded in clarity, intuition, and emotional intelligence. Working at the intersection of strategy, UX architecture, and hands-on craft, I bring a systems mindset and strong visual instinct to deliver products that feel elegant, seamless, and instantly understandable. I'm especially energized by how AI and vibe coding are accelerating the path from idea to execution, unlocking new leverage for ambitious teams building meaningful products.</p>
+          <div class="bio__right">
+            <blockquote class="bio__quote-mark" aria-hidden="true">"</blockquote>
+            <p class="bio__text">Founding Product Designer with 15+ years building SaaS and digital products from idea to scale. I design with a deep focus on human behavior and how people think, decide, and build trust. Creating experiences grounded in clarity, intuition, and emotional intelligence.</p>
+            <p class="bio__text">Working at the intersection of strategy, UX architecture, and hands-on craft, I bring a systems mindset and strong visual instinct to deliver products that feel elegant, seamless, and instantly understandable. I'm especially energized by how AI and vibe coding are accelerating the path from idea to execution, unlocking new leverage for ambitious teams building meaningful products.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="projects" id="projects" aria-labelledby="projects-heading">
+    <section class="projects reveal" id="projects" aria-labelledby="projects-heading">
       <div class="container">
         <div class="section-header-row">
-          <h2 class="section-heading" id="projects-heading">Projects</h2>
+          <div>
+            <p class="section-tag">Selected Work</p>
+            <h2 class="section-heading" id="projects-heading">Projects</h2>
+          </div>
           <a href="#" class="pill-btn" aria-label="See full portfolio on Figma">See Portfolio (Figma)</a>
         </div>
         <p class="projects__sub">I've worked on a wide range of projects from mobile to desktop, across both B2B and B2C and have covered a broad range of industries.</p>
@@ -120,8 +151,9 @@
     </section>
 
     <!-- CLIENT VOICES -->
-    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+    <section class="testimonials reveal" id="testimonials" aria-labelledby="testimonials-heading">
       <div class="container">
+        <p class="section-tag">Kind Words</p>
         <h2 class="section-heading" id="testimonials-heading">Client Voices</h2>
         <div class="testimonial-grid">
           <blockquote class="testimonial-card">
@@ -157,8 +189,9 @@
     </section>
 
     <!-- INDUSTRIES -->
-    <section class="industries" id="industries" aria-labelledby="industries-heading">
+    <section class="industries reveal" id="industries" aria-labelledby="industries-heading">
       <div class="container">
+        <p class="section-tag">Breadth</p>
         <h2 class="section-heading" id="industries-heading">Industries, Business Models &amp; Products</h2>
         <div class="client-tags" role="list" aria-label="Industries and product types">
           <span class="tag" role="listitem">Health &amp; Medical</span><span class="tag" role="listitem">Wellness</span><span class="tag" role="listitem">Auto Warranty</span><span class="tag" role="listitem">Biotech</span><span class="tag" role="listitem">Social Networks</span><span class="tag" role="listitem">Web3</span><span class="tag" role="listitem">HR</span><span class="tag" role="listitem">Delivery &amp; Shipping</span><span class="tag" role="listitem">E-Commerce</span><span class="tag" role="listitem">Online Marketing</span><span class="tag" role="listitem">Fintech</span><span class="tag" role="listitem">B2B</span><span class="tag" role="listitem">B2C</span><span class="tag" role="listitem">SAAS</span><span class="tag" role="listitem">MarketPlace</span><span class="tag" role="listitem">Mobile Apps</span><span class="tag" role="listitem">Desktop Apps</span><span class="tag" role="listitem">Device-Specific UI</span><span class="tag" role="listitem">Internal Tools</span><span class="tag" role="listitem">Consumer Platforms</span><span class="tag" role="listitem">POS</span>
@@ -167,11 +200,12 @@
     </section>
 
     <!-- CTA -->
-    <section class="cta" id="contact" aria-labelledby="cta-heading">
+    <section class="cta reveal" id="contact" aria-labelledby="cta-heading">
       <div class="container cta__inner">
+        <p class="section-tag section-tag--center">Let's Work Together</p>
         <h2 class="cta__heading" id="cta-heading">Let's Talk</h2>
         <p class="cta__sub">Ready to bring your next idea to life?</p>
-        <a href="https://calendly.com/flowform/30min?back=1" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn--outline">Schedule a call</a>
+        <a href="https://calendly.com/flowform/30min?back=1" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn--gold">Schedule a call</a>
       </div>
     </section>
 
@@ -186,14 +220,22 @@
   </footer>
 
   <script>
+    // Nav scroll state
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('nav--scrolled', window.scrollY > 10);
     }, { passive: true });
+
+    // Scroll reveal
     const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('section').forEach(s => { s.classList.add('reveal'); io.observe(s); });
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(s => io.observe(s));
   </script>
 </body>
 </html>
