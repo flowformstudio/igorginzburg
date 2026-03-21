@@ -163,7 +163,7 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
   gap: 1.5rem;
   min-height: 72px;
-  padding: 0 0.25rem;
+  padding: 0 1.5rem;
 }
 .nav__brand {
   display: flex;
