@@ -439,13 +439,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.78rem;
   font-weight: 400;
   color: var(--muted);
-  transition: border-color var(--transition), color var(--transition), background var(--transition);
   cursor: default;
-}
-.tag:hover {
-  border-color: var(--border-gold);
-  color: var(--gold);
-  background: var(--gold-dim);
 }
 .tag--bold {
   border-color: var(--border);
