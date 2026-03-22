@@ -14,7 +14,7 @@
   --gold:        #c8a96e;
   --gold-bright: #e0c48a;
   --gold-dim:    rgba(200, 169, 110, 0.15);
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Syne', system-ui, sans-serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
   --max:         1200px;
   --radius:      12px;
@@ -173,10 +173,10 @@ img { max-width: 100%; display: block; }
 }
 .nav__name {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--text);
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
   line-height: 1.1;
 }
 .nav__title {
@@ -230,17 +230,17 @@ img { max-width: 100%; display: block; }
 
 .hero__headline {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 7.5vw, 7rem);
-  font-weight: 500;
-  line-height: 1.02;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1.0;
   color: var(--text);
   margin-bottom: 3rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
 }
 
 .hero__headline em {
-  font-style: italic;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
   color: var(--gold);
 }
 
@@ -340,9 +340,10 @@ img { max-width: 100%; display: block; }
 .bio__stat-num {
   font-family: var(--font-display);
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--gold);
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 .bio__stat-label {
   font-size: 0.72rem;
@@ -384,10 +385,10 @@ img { max-width: 100%; display: block; }
 .section-heading {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 4vw, 3.6rem);
-  font-weight: 600;
-  line-height: 1.05;
+  font-weight: 800;
+  line-height: 1.0;
   color: var(--text);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
 }
 
 /* ============================================================
@@ -504,11 +505,11 @@ img { max-width: 100%; display: block; }
   border-left-color: var(--gold-bright);
 }
 .testimonial-card__quote {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.18rem;
-  line-height: 1.6;
-  color: rgba(240, 236, 228, 0.85);
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(240, 236, 228, 0.8);
   flex: 1;
 }
 .testimonial-card__author {
@@ -563,12 +564,12 @@ img { max-width: 100%; display: block; }
 .cta__heading {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 8vw, 7rem);
-  font-weight: 500;
-  font-style: italic;
+  font-weight: 800;
+  font-style: normal;
   color: var(--text);
   line-height: 1;
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 .cta__sub {
   font-size: 1rem;
@@ -593,8 +594,9 @@ img { max-width: 100%; display: block; }
 .footer__name {
   font-family: var(--font-display);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--text);
+  letter-spacing: -0.02em;
 }
 .footer__copy {
   font-size: 0.78rem;
