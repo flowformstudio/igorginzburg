@@ -139,6 +139,16 @@ img { max-width: 100%; display: block; }
   color: #0c0c0d;
   transform: translateY(-1px);
 }
+.pill-btn--outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--muted);
+}
+.pill-btn--outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: transparent;
+}
 
 /* ============================================================
    NAV
@@ -438,9 +448,15 @@ img { max-width: 100%; display: block; }
   background: var(--gold-dim);
 }
 .tag--bold {
-  border-color: var(--border-gold);
-  color: var(--gold);
-  font-weight: 500;
+  border-color: var(--border);
+  color: var(--muted);
+  font-weight: 400;
+  pointer-events: none;
+}
+.tag--bold:hover {
+  border-color: var(--border);
+  color: var(--muted);
+  background: var(--surface);
 }
 
 /* Project grid */
