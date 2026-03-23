@@ -374,13 +374,78 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta reveal" id="contact" aria-labelledby="cta-heading">
-      <div class="container cta__inner">
-        <p class="section-tag section-tag--center">Let's Work Together</p>
-        <h2 class="cta__heading" id="cta-heading">Let's Talk</h2>
-        <p class="cta__sub">Ready to bring your next idea to life?</p>
-        <a href="https://calendly.com/flowform/30min?back=1" target="_blank" rel="noopener noreferrer" class="pill-btn pill-btn--white">Schedule a call</a>
+    <!-- CONTACT -->
+    <section class="contact reveal" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__inner">
+
+          <!-- Left: form -->
+          <div class="contact__left">
+            <p class="section-tag">Get In Touch</p>
+            <h2 class="contact__heading" id="contact-heading">Let's Get Started</h2>
+            <p class="contact__sub">Tell me about your project and I'll get back to you within one business day. Or if you'd rather talk, grab a time on my calendar.</p>
+
+            <form
+              class="contact__form"
+              action="https://formspree.io/f/xojkgqgq"
+              method="POST"
+              id="contactForm"
+              novalidate
+            >
+
+              <div class="contact__row">
+                <div class="contact__field">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="first_name" placeholder="" required>
+                </div>
+                <div class="contact__field">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="last_name" placeholder="" required>
+                </div>
+              </div>
+
+              <div class="contact__field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="" required>
+              </div>
+
+              <div class="contact__field">
+                <label for="company">Company <span class="contact__optional">(Optional)</span></label>
+                <input type="text" id="company" name="company" placeholder="">
+              </div>
+
+              <div class="contact__field">
+                <label for="message">What are you working on?</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+              </div>
+
+              <button type="submit" class="contact__submit">
+                <span class="contact__submit-text">Send Message</span>
+                <span class="contact__submit-arrow">→</span>
+              </button>
+
+              <p class="contact__success" id="contactSuccess" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- Right: photo + meta -->
+          <div class="contact__right">
+            <div class="contact__photo-wrap">
+              <img
+                src="https://cdn.prod.website-files.com/62d7f53e2e44a905cff68bd9/62d7f53e2e44a94192f68e2e_1643648809707.jpeg"
+                alt="Igor Ginzburg"
+                class="contact__photo"
+                loading="lazy"
+              >
+            </div>
+            <div class="contact__meta">
+              <p class="contact__meta-line">Based in Santa Rosa, CA</p>
+              <p class="contact__meta-line">Available for new projects</p>
+              <a href="https://calendly.com/flowform/30min?back=1" target="_blank" rel="noopener noreferrer" class="contact__calendly">Or book a call directly →</a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -425,6 +490,39 @@
       });
     }, { threshold: 0.07 });
     document.querySelectorAll('.reveal').forEach(s => io.observe(s));
+
+    // Contact form — Web3Forms submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = contactForm.querySelector('.contact__submit');
+        const successMsg = document.getElementById('contactSuccess');
+        btn.disabled = true;
+        btn.querySelector('.contact__submit-text').textContent = 'Sending...';
+        try {
+          const res = await fetch('https://formspree.io/f/xojkgqgq', {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          const data = await res.json();
+          if (res.ok) {
+            successMsg.textContent = "Message sent! I'll be in touch within one business day.";
+            successMsg.style.color = '#7ecba1';
+            contactForm.reset();
+          } else {
+            successMsg.textContent = 'Something went wrong. Please try again or email me directly.';
+            successMsg.style.color = '#e07a7a';
+          }
+        } catch {
+          successMsg.textContent = 'Something went wrong. Please try again.';
+          successMsg.style.color = '#e07a7a';
+        }
+        btn.disabled = false;
+        btn.querySelector('.contact__submit-text').textContent = 'Send Message';
+      });
+    }
 
     // Work marquee — clone for seamless loop
     (function() {

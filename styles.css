@@ -694,6 +694,208 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   CONTACT
+   ============================================================ */
+.contact {
+  padding: 8rem 0 10rem;
+  border-top: 1px solid var(--border);
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 6rem;
+  align-items: start;
+}
+
+.contact__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.05;
+  margin: 0.6rem 0 1rem;
+}
+
+.contact__sub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.contact__field label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(240,237,232,0.5);
+}
+
+.contact__optional {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 0.6;
+}
+
+.contact__field input,
+.contact__field textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+  color: rgba(240,237,232,0.2);
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: rgba(240,237,232,0.3);
+  background: var(--surface-2);
+}
+
+.contact__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  padding: 0.95rem 2rem;
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.contact__submit:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.contact__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact__success {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  min-height: 1.4rem;
+}
+
+/* Right column */
+.contact__photo-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--surface);
+}
+
+.contact__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+}
+
+.contact__meta {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.contact__meta-line {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.contact__calendly {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240,237,232,0.25);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.contact__calendly:hover {
+  border-color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact__right {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .contact__photo-wrap {
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__row {
+    grid-template-columns: 1fr;
+  }
+  .contact__right {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
    CTA
    ============================================================ */
 .cta {
